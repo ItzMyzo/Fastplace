@@ -1,0 +1,11 @@
+[{
+  "modid": "fp",
+  "name": "Fastplace",
+  "description": "Allows you to set the block place delay with /setdelay <delay>.",
+  "version": "1.1",
+  "mcversion": "1.8.9",
+  "logoFile": "",
+  "url": "https://github.com/ItzMyzo/Fastplace/",
+  "authorList": ["Myzo, Nanook"],
+  "credits": "Myzo, Nanook"
+}]
