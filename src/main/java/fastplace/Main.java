@@ -1,9 +1,5 @@
 package fastplace;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.lang.reflect.Field;
 
 import org.lwjgl.input.Keyboard;
@@ -19,12 +15,12 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 
-@Mod(modid = "fp", name = "Fastplace", version = "1.1")
+@Mod(modid = "fp", name = "Fastplace", version = "1.1.1")
 public class Main 
 {
-
 	public static boolean fastplace = false;
 	
 	public static KeyBinding Fastplace = new KeyBinding("Toggle Fastplace", Keyboard.KEY_G, "Fastplace");
@@ -42,18 +38,18 @@ public class Main
 	@EventHandler 
 	public void init(FMLInitializationEvent event) 
 	{
-		
-		//Keybind register
+
 		ClientRegistry.registerKeyBinding(Fastplace);
-		MinecraftForge.EVENT_BUS.register(new keyHandler());
+		
+	    MinecraftForge.EVENT_BUS.register(new keyHandler());
 		MinecraftForge.EVENT_BUS.register(new onInteract());
-		System.out.println("Successfully initialized Fastplace 1.1 by Myzo");
+		
+		System.out.println("Successfully initialized Fastplace 1.1.1 by Myzo");
 		
 	}
 	
 	@EventHandler
-	public void postinit(FMLPostInitializationEvent event) {	
-	}
+	public void postinit(FMLPostInitializationEvent event) {}
 }
 	
 
